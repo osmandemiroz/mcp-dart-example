@@ -145,7 +145,7 @@ class AppTheme {
         ),
       ),
       dividerTheme: DividerThemeData(
-        color: colorScheme.outline.withOpacity(0.2),
+        color: colorScheme.outline.withValues(alpha: 0.2),
         thickness: 1,
         space: 1,
       ),

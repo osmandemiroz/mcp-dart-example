@@ -383,21 +383,28 @@ class _HomePageState extends ConsumerState<HomePage>
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                   const SizedBox(height: AppConstants.smallPadding),
-                  Column(
-                    children: AppTheme.values.map((theme) {
-                      return RadioListTile<AppTheme>(
-                        title: Text(theme.displayName),
-                        value: theme,
-                        groupValue: settings.themeMode,
-                        onChanged: (value) {
-                          if (value != null) {
+                  RadioGroup<AppTheme>(
+                    groupValue: settings.themeMode,
+                    onChanged: (value) {
+                      if (value != null) {
+                        ref.read(appStateProvider.notifier).updateSettings(
+                              settings.copyWith(themeMode: value),
+                            );
+                      }
+                    },
+                    child: Column(
+                      children: AppTheme.values.map((theme) {
+                        return ListTile(
+                          title: Text(theme.displayName),
+                          leading: Radio<AppTheme>(value: theme),
+                          onTap: () {
                             ref.read(appStateProvider.notifier).updateSettings(
-                                  settings.copyWith(themeMode: value),
+                                  settings.copyWith(themeMode: theme),
                                 );
-                          }
-                        },
-                      );
-                    }).toList(),
+                          },
+                        );
+                      }).toList(),
+                    ),
                   ),
                 ],
               ),
