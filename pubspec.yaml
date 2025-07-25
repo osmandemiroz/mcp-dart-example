@@ -1,6 +1,6 @@
 name: mcp_dart_example
-description: A Flutter example demonstrating Dart MCP Server capabilities
-version: 1.0.0+1
+description: A sophisticated Flutter application demonstrating advanced Dart MCP Server capabilities with modern architecture
+version: 2.0.0+1
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -9,15 +9,84 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  
+  # UI & Icons
   cupertino_icons: ^1.0.6
+  
+  # Charts & Data Visualization
   syncfusion_flutter_charts: ^26.2.14
+  fl_chart: ^0.68.0
+  
+  # State Management
+  provider: ^6.1.2
+  riverpod: ^2.4.9
+  flutter_riverpod: ^2.4.9
+  
+  # Database & Storage
+  sqflite: ^2.3.0
+  shared_preferences: ^2.2.2
+  path_provider: ^2.1.2
+  path: ^1.8.3
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  
+  # Networking & Communication
   http: ^1.2.2
+  web_socket_channel: ^2.4.0
+  dio: ^5.4.0
+  
+  # Utilities
   intl: ^0.19.0
+  uuid: ^4.3.3
+  logger: ^2.0.2+1
+  json_annotation: ^4.8.1
+  equatable: ^2.0.5
+  
+  # File handling
+  file_picker: ^6.1.1
+  csv: ^6.0.0
+  
+  # Animations
+  lottie: ^3.0.0
+  animations: ^2.0.11
+  
+  # Responsive design
+  flutter_screenutil: ^5.9.0
+  responsive_framework: ^1.1.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  
+  # Linting & Analysis
   very_good_analysis: ^9.0.0
+  flutter_lints: ^3.0.1
+  
+  # Code Generation
+  build_runner: ^2.4.7
+  json_serializable: ^6.7.1
+  hive_generator: ^2.0.1
+  
+  # Testing
+  mockito: ^5.4.4
+  integration_test:
+    sdk: flutter
+  patrol: ^3.6.1
+  
+  # Coverage
+  coverage: ^1.7.2
 
 flutter:
   uses-material-design: true
+  
+  assets:
+    - assets/images/
+    - assets/animations/
+    - assets/icons/
+  
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Bold.ttf
+          weight: 700
